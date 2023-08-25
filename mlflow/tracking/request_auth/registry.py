@@ -49,5 +49,5 @@ def fetch_auth(request_auth):
 
     warnings.warn(
         f"Could not find any registered plugin for {request_auth}. No authentication header will be added."
-        "Please check your provider documentation for installing the right plugin or correct provider name"
+        "Please check your provider documentation for installing the right plugin or correct provider name."
     )
