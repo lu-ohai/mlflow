@@ -184,6 +184,7 @@ plugin:
        `mlflow.tracking.request_auth.abstract_request_auth_provider.RequestAuthProvider <https://github.com/mlflow/mlflow/blob/master/mlflow/tracking/request_auth/abstract_request_auth_provider.py#L4>`_
        (e.g., the `PluginRequestAuthProvider class <https://github.com/mlflow/mlflow/blob/master/tests/resources/mlflow-test-plugin/mlflow_test_plugin/request_auth_provider.py>`_
        within the ``mlflow_test_plugin`` module) to register.
+     - N/A (will be added soon)
    * - Plugins for overriding definitions of Model Registry APIs like ``mlflow.register_model``.
      - mlflow.model_registry_store
      - The entry point value (e.g. ``mlflow_test_plugin.sqlalchemy_store:PluginRegistrySqlAlchemyStore``) specifies a custom subclass of

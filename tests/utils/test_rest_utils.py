@@ -200,6 +200,8 @@ def test_http_request_with_auth(fetch_auth, request):
     response.status_code = 200
     request.return_value = response
     http_request(host_only, "/my/endpoint", "GET")
+
+    fetch_auth.assert_called_with(auth)
     
     request.assert_called_with(
         "GET",
