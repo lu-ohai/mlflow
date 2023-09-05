@@ -1,9 +1,11 @@
-from unittest import mock
 from importlib import reload
-import pytest
-import mlflow.tracking.request_auth.registry
+from unittest import mock
 
+import pytest
+
+import mlflow.tracking.request_auth.registry
 from mlflow.tracking.request_auth.registry import RequestAuthProviderRegistry, fetch_auth
+
 
 def test_request_auth_provider_registry_register():
     provider_class = mock.Mock()

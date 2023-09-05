@@ -6,8 +6,8 @@ from pathlib import Path
 from typing import Union
 
 from mlflow.environment_variables import (
-    MLFLOW_TRACKING_AWS_SIGV4,
     MLFLOW_TRACKING_AUTH,
+    MLFLOW_TRACKING_AWS_SIGV4,
     MLFLOW_TRACKING_CLIENT_CERT_PATH,
     MLFLOW_TRACKING_INSECURE_TLS,
     MLFLOW_TRACKING_SERVER_CERT_PATH,

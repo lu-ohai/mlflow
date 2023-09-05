@@ -76,6 +76,31 @@ View results at http://localhost:5000. You should see a newly-created run with a
     .. image:: ./_static/images/quickstart/quickstart_ui_screenshot.png
 
 
+Use Plugin for Client Side Authentication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MLflow provides ``RequestAuthProvider`` plugin to customize auth header for outgoing http request.
+
+To use it, implement the ``RequestAuthProvider`` class and override the ``get_name`` and ``get_auth`` methods.
+``get_name`` should return the name of your auth provider, while ``get_auth`` should return the auth object
+that will be added to the http request.
+
+Once you have the implemented request auth provider class, register it in the ``entry_points`` and install the plugin.
+
+.. code-block:: python
+  setup(
+      ...
+      entry_points={
+          ...,
+          "mlflow.request_auth_provider": "<dummy-backend>=<the_implemented_auth_request_provider>",
+      },
+  )
+
+Then set environment variable ``MLFLOW_TRACKING_AUTH`` in code to enable the injection of custom auth.
+The value of this environment variable should match the name of the auth provider.
+
+.. code-block:: python
+  os.environ["MLFLOW_TRACKING_AUTH"] = "<auth_provider_name>"
+
 
 Writing Your Own MLflow Plugins
 -------------------------------

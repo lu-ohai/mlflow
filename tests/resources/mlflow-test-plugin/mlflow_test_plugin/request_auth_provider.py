@@ -8,4 +8,4 @@ class PluginRequestAuthProvider(RequestAuthProvider):
         return "test_auth_provider_name"
 
     def get_auth(self):
-        return dict(auth_name="test_auth_provider_name")
+        return {"auth_name": "test_auth_provider_name"}

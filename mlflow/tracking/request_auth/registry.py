@@ -1,5 +1,6 @@
-import entrypoints
 import warnings
+
+import entrypoints
 
 REQUEST_AUTH_PROVIDER_ENTRYPOINT = "mlflow.request_auth_provider"
 
